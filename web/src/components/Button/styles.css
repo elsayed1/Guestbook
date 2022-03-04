@@ -1,0 +1,23 @@
+.primary {
+  background-color: var(--primary-color);
+}
+.primary:hover {
+  background-color: var(--hover-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.accent {
+  background-color: var(--accent-color);
+}
+
+button {
+  outline: none;
+  padding: 8px;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+}
