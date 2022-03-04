@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
-test('renders learn react link', () => {
+import App from "./App";
+
+test("Start at login screen", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole("heading")).toHaveTextContent("Login");
+});
+
+test("navigation", () => {
+  render(<App />);
+  const register = screen.getByText(/Register/);
+  expect(register).toHaveTextContent("Register");
+  fireEvent.click(register);
+  expect(screen.getByRole("heading")).toHaveTextContent("Register");
 });
