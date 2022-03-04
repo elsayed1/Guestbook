@@ -1,0 +1,32 @@
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+}
+
+input {
+  outline: none;
+  padding: 8px;
+  min-width: 150px;
+  width: inherit;
+}
+
+.rounded {
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+}
+
+.standard {
+}
+
+label {
+  color: var(--secondary-color);
+  width: 150px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.inputError {
+  margin-left: 12px;
+}
