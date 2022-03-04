@@ -10,7 +10,7 @@
 
 - Clone the repo 
 ```bash
-   git clone
+   git clone https://github.com/elsayed1/Guestbook.git
    cd Guestbook
    npm i
    cd web 
