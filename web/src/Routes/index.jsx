@@ -16,17 +16,11 @@ const PrivateRoute = ({ children }) => {
   return user ? children : null;
 };
 
-const Route = ({ path, children, currentPath }) => {
-  return currentPath === path ? children : null;
-};
-
-const Router = () => {
+const Route = ({ path, children }) => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   console.log(currentPath);
   useEffect(() => {
     const onLocationChange = () => {
-      console.log("herer");
-
       setCurrentPath(window.location.pathname);
     };
 
@@ -37,16 +31,19 @@ const Router = () => {
       window.removeEventListener("popstate", onLocationChange);
     };
   }, []);
+  return currentPath === path ? children : null;
+};
 
+const Router = () => {
   return (
     <>
-      <Route path="/login" currentPath={currentPath}>
+      <Route path="/login">
         <Login />
       </Route>
-      <Route path="/register" currentPath={currentPath}>
+      <Route path="/register">
         <Register />
       </Route>
-      <Route path="/" currentPath={currentPath}>
+      <Route path="/">
         <PrivateRoute>
           <Home />
         </PrivateRoute>

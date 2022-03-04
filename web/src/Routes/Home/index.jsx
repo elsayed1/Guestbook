@@ -167,9 +167,7 @@ const Home = () => {
   useEffect(() => {
     getMessages();
   }, []);
-  useLayoutEffect(() => {
-    if (!user) navigate("/login");
-  }, []);
+
   const createMessage = async () => {
     try {
       const createdMessage = await createMessageService(newMessage);
