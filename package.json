@@ -1,0 +1,20 @@
+{
+  "name": "guestbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node index.js",
+    "startDB": "brew services start mongodb-community@5.0",
+    "client": "npm start --prefix web",
+    "start": "npm run server & npm run client"
+  },
+  "author": "elsayed_alaa <elsayed0alaa@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4"
+  }
+}
