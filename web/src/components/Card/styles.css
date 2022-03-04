@@ -1,0 +1,11 @@
+.card {
+  padding: 16px 32px;
+  box-shadow: 10px 11px 40px -7px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 10px 11px 40px -7px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 10px 11px 40px -7px rgba(0, 0, 0, 0.73);
+  background-color: var(--box-color);
+}
+
+.dark {
+  background-color: var(--secondary-color);
+}
